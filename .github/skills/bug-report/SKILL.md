@@ -1,8 +1,11 @@
 ---
 name: bug-report
-description: 이슈 한 건을 버그 리포트로 정리하기 전에 조사 계획을 먼저 세웁니다
+description: 이슈 한 건을 버그 리포트로 정리하기 전에 조사 계획을 먼저 세웁니다. 사용자가 /bug-report로 부를 때만 사용합니다.
 argument-hint: 이슈 번호 또는 증상
+disable-model-invocation: true
 ---
+
+# 버그 리포트 조사 계획
 
 명령 뒤에 적힌 이슈(번호 또는 증상)를 버그 리포트로 정리하려고 합니다.
 바로 리포트를 쓰지 말고, 아래 순서로 조사 계획을 먼저 세웁니다.

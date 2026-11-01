@@ -5,7 +5,7 @@
   "description": "GitHub Copilot으로 만드는 연구개발팀 업무 비서 예제",
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "triage": "node scripts/triage.js",
