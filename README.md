@@ -2,6 +2,7 @@
 
 VS Code와 GitHub Copilot으로 연구개발팀의 반복 업무를 맡기는 예제입니다.
 가상의 온도 센서 모듈 TS-100을 만드는 팀을 배경으로, 팀 FAQ 답변, 노트북 신청 양식 작성, 회의록 정리, 이슈 판정, 보고서 생성을 다룹니다.
+[GitHub Copilot 업무 비서 만들기](https://www.heropy.dev/p/PgnSNw) 글에서 단계별로 사용하고, 기능 설명은 [GitHub Copilot 핵심 정리](https://www.heropy.dev/p/AbbCk6)에 있습니다.
 
 ## 준비
 
@@ -44,7 +45,7 @@ node scripts/check.js    # 검증셋과 비교
 | --- | --- | --- |
 | 1 | 팀 FAQ 비서 | `.github/skills/team-faq/` |
 | 2 | 노트북 신청 양식 작성 | `.github/skills/laptop-request/` |
-| 3 | 회의록 정리와 되묻기 | `.github/skills/meeting-notes/`, `data/meeting-2026-09-01.md` |
+| 3 | 회의록 정리와 되묻기 | `.github/skills/meeting-notes/`, `data/meeting-2026-09-01.md`, 심화: `data/meeting-2026-09-08.md`, `docs/glossary.md` |
 | 4 | 스펙 문서 질문과 출처 확인 | `docs/spec-ts100.md` |
 | 5 | 버그 리포트 조사 계획 | `.github/skills/bug-report/` |
 | 6 | 이슈 판정표 생성 | `scripts/triage.js`, `docs/issue-rules.md` |
