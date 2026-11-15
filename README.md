@@ -26,6 +26,7 @@ VS Code와 GitHub Copilot으로 연구개발팀의 반복 업무를 맡기는 �
 │   └── settings.json             # 작업 영역 설정
 ├── docs/                         # 기준 문서(지식 베이스)
 ├── data/                         # 이슈 목록, 회의 메모 원본
+├── private/                      # members.csv(팀원 명부, Hook 실습), secret.txt(샌드박스 실습)
 ├── scripts/                      # 판정, 보고서, 검증 스크립트
 ├── tests/cases.json              # 검증셋(정상, 경계, 실패)
 └── output/                       # 생성된 결과물

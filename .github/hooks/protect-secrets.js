@@ -9,7 +9,7 @@ const BLOCKED = [
   '.env*', // .env, .env.local, .env.production
   '*.pem', // 인증서와 개인 키
   'secrets/**', // secrets 폴더 안의 모든 파일
-  'config/credentials.json',
+  'private/members.csv', // 팀원 명부
 ]
 
 // 'config/*.json' 같은 패턴을 정규식으로 바꿉니다.
