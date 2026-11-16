@@ -20,7 +20,7 @@ VS Code와 GitHub Copilot으로 연구개발팀의 반복 업무를 맡기는 �
 │   ├── instructions/             # 특정 파일에만 적용되는 규칙
 │   ├── agents/                   # 이슈 판정 전용 커스텀 에이전트
 │   ├── skills/                   # team-faq, laptop-request, meeting-notes, issue-triage,
-│   │                             # weekly-report, bug-report 스킬
+│   │                             # weekly-report, bug-report, git-workflow 스킬
 │   └── hooks/                    # 비밀 파일 읽기를 차단하는 Hook
 ├── .vscode/
 │   └── settings.json             # 작업 영역 설정
@@ -36,7 +36,7 @@ VS Code와 GitHub Copilot으로 연구개발팀의 반복 업무를 맡기는 �
 
 ```bash
 node scripts/triage.js   # data/issues.csv 판정 -> output/triage-result.md, .csv
-node scripts/report.js   # 판정 결과로 보고서 -> output/report.md
+node scripts/report.js   # 판정 결과로 보고서 -> output/report-YYYY-MM-DD.md
 node scripts/check.js    # 검증셋과 비교
 ```
 
@@ -53,6 +53,7 @@ node scripts/check.js    # 검증셋과 비교
 | 7 | 보고서 자동 생성 | `scripts/report.js`, `.github/skills/weekly-report/` |
 | 8 | 검증셋과 권한 | `scripts/check.js`, `tests/cases.json`, `.github/hooks/` |
 | 9 | 통합과 적용안 | `docs/quality-checklist.md`, `docs/adoption-plan-template.md` |
+| 10 | 팀 운영(원격 저장소, 풀, 커밋, 푸시) | `.github/skills/git-workflow/` |
 
 채팅 뷰에서 `/`를 입력하면 스킬 목록이 표시됩니다.
 `weekly-report`와 `bug-report`는 `/이름`으로 부를 때만 실행되는 스킬입니다.

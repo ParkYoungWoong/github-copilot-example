@@ -1,3 +1,5 @@
 node_modules/
 .env
 .DS_Store
+output/triage-result.md
+output/triage-result.csv

@@ -1,10 +1,15 @@
-// 판정 결과(output/triage-result.csv)로 docs/report-template.md 형식의 보고서를 만듭니다.
+// 판정 결과(output/triage-result.csv)로 docs/report-template.md 형식의 보고서(output/report-YYYY-MM-DD.md)를 만듭니다.
 // 실행: node scripts/report.js
 import fs from 'node:fs'
 import { parseCsv } from './triage.js'
 
 const INPUT = 'output/triage-result.csv'
-const OUTPUT = 'output/report.md'
+
+/** 실행한 날짜(로컬 시간 기준)를 YYYY-MM-DD 형식으로 만듭니다. */
+function localDate(date = new Date()) {
+  const pad = number => String(number).padStart(2, '0')
+  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`
+}
 
 /** docs/issue-rules.md의 담당자 배정 규칙 */
 function assignOwner(row) {
@@ -30,7 +35,8 @@ function main() {
     process.exit(1)
   }
   const rows = parseCsv(fs.readFileSync(INPUT, 'utf8')).map(row => ({ ...row, 담당: assignOwner(row) }))
-  const today = new Date().toISOString().slice(0, 10)
+  const today = localDate()
+  const OUTPUT = `output/report-${today}.md`
   const high = rows.filter(row => row.우선순위 === '높음')
   const pending = rows.filter(row => row.상태 === '미판정')
   const flagged = rows.filter(row => row.상태 === '판정' && row.비고)
