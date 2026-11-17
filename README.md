@@ -12,6 +12,15 @@ VS Code와 GitHub Copilot으로 연구개발팀의 반복 업무를 맡기는 �
 
 외부 패키지를 사용하지 않으므로 별도의 설치 명령은 없습니다.
 
+## 브랜치
+
+| 브랜치 | 내용 |
+| --- | --- |
+| `main` | 실습을 시작하는 상태. 글에서 Copilot에게 만들게 하는 판정, 보고 스크립트와 실습 결과물은 들어 있지 않습니다 |
+| `complete` | 글의 실습을 끝까지 따라 한 완성본. 만든 스크립트와 비교하거나, 실습이 막혔을 때 받아서 이어 갑니다 |
+
+`Code > Download ZIP`은 `main`을 받습니다. 완성본은 브랜치 메뉴에서 `complete`를 고른 뒤 같은 방법으로 받습니다.
+
 ## 구조
 
 ```plaintext
@@ -28,12 +37,14 @@ VS Code와 GitHub Copilot으로 연구개발팀의 반복 업무를 맡기는 �
 ├── docs/                         # 기준 문서(지식 베이스), 보고서 Word 양식
 ├── data/                         # 이슈 목록, 회의 메모 원본
 ├── private/                      # members.csv(팀원 명부, Hook 실습), secret.txt(샌드박스 실습)
-├── scripts/                      # 판정, 보고서, Word 양식 채우기, 검증 스크립트
+├── scripts/                      # Word 양식 채우기, 검증 스크립트(판정, 보고서 스크립트는 실습에서 만듦)
 ├── tests/cases.json              # 검증셋(정상, 경계, 실패)
 └── output/                       # 생성된 결과물
 ```
 
 ## 실행
+
+판정, 보고서 스크립트를 만든 뒤(또는 `complete` 브랜치에서) 실행합니다.
 
 ```bash
 node scripts/triage.js   # data/issues.csv 판정 -> output/triage-result.md, .csv

@@ -9,7 +9,7 @@ disable-model-invocation: true
 
 `output/triage-result.md` 판정표를 읽고 `docs/report-template.md` 형식 그대로 주간 보고서를 작성합니다.
 
-- 보고 기간: 명령 뒤에 적은 기간을 사용합니다. 없으면 이번 주로 합니다.
+- 보고 기간: 명령 뒤에 적은 기간을 사용합니다. 없으면 이번 주로 합니다. 보고서 제목 바로 아래에 `보고 기간: ...` 한 줄로 적습니다.
 - 판정표가 없으면 `node scripts/triage.js`를 먼저 실행합니다.
 - 결과 파일: `output/weekly-report-YYYY-MM-DD.md` (작성한 날짜)
 
