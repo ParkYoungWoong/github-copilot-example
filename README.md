@@ -51,7 +51,7 @@ node scripts/triage.js   # data/issues.csv 판정 -> output/triage-result.md, .c
 node scripts/report.js   # 판정 결과로 보고서 -> output/report-YYYY-MM-DD.md
 node scripts/check.js    # 검증셋과 비교
 node scripts/fill-docx.js docs/report-template.docx   # Word 양식의 칸 목록 보기
-node scripts/fill-docx.js docs/report-template.docx output/weekly-report-2026-09-04.json   # 값 파일로 Word 파일 만들기
+node scripts/fill-docx.js docs/report-template.docx output/weekly-report-YYYY-MM-DD.json   # 값 파일로 Word 파일 만들기
 ```
 
 ## 실습 순서
